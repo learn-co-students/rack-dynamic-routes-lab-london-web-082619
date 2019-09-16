@@ -1,4 +1,7 @@
 class Application 
+    
+    @@items = [Item.new("Figs",3.42),Item.new("Oranges",777)] # this is a different item list from the one in Item
+
 
     def call (env)
         resp = Rack::Response.new
@@ -18,7 +21,7 @@ class Application
             resp.write "Route not found"
             resp.status = 404
         end
-
+        
         resp.finish
     end
 end

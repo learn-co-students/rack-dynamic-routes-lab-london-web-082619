@@ -1,12 +1,12 @@
 class Item
   attr_accessor :name, :price
 
-   @@items = []
+  # @@items = [] Not needed. This could be activaed with below
 
   def initialize(name,price)
     @name = name
     @price = price
-    @@items << self
+  # @@items << self Not needed. This can be activaed with above
   end
 
 end
